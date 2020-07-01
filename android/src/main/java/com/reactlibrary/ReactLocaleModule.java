@@ -4,6 +4,7 @@ import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.bridge.Callback;
+import java.util.Locale;
 
 public class ReactLocaleModule extends ReactContextBaseJavaModule {
 
@@ -20,8 +21,18 @@ public class ReactLocaleModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
-    public void sampleMethod(String stringArgument, int numberArgument, Callback callback) {
-        // TODO: Implement some actually useful functionality
-        callback.invoke("Received numberArgument: " + numberArgument + " stringArgument: " + stringArgument);
+    public void isMetric(Callback callback) {
+        boolean isNumeric = false;
+        String countryCode = Locale.getDefault().getCountry().toUpperCase();
+        switch (countryCode) {
+            case "US":
+            case "LR":
+            case "MM":
+                isNumeric = false;
+            default:
+                isNumeric = true;
+        }
+
+        callback.invoke(isNumeric);
     }
 }

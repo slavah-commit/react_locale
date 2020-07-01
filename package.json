@@ -1,5 +1,5 @@
 {
-  "name": "react-native-react-locale",
+  "name": "react-native-locale",
   "title": "React Native React Locale",
   "version": "1.0.0",
   "description": "TODO",
@@ -17,14 +17,14 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/github_account/react-native-react-locale.git",
-    "baseUrl": "https://github.com/github_account/react-native-react-locale"
+    "baseUrl": "https://github.com/slavah-commit/react_locale"
   },
   "keywords": [
     "react-native"
   ],
   "author": {
-    "name": "Your Name",
-    "email": "yourname@email.com"
+    "name": "Slava Horesh",
+    "email": "slavah@comm-it.com"
   },
   "license": "MIT",
   "licenseFilename": "LICENSE",
